@@ -6,23 +6,19 @@ using namespace std;
 
 int main()
 {
-    long long n, minimum, x;
+    int n;
     cin >> n;
-    long long arr[n];
-    cin >>x;
-    arr[0] = x;
-    minimum = x;
-    for (long long i = 1; i < n; i++){
-        cin >> x;
-        if(x< minimum){
-            minimum = x;
-        }
-        arr[i] = x;
+    int arr[n];
+
+    for (int i = 0; i < n; i++){
+        cin >> arr[i];
     }
 
-    long long counter = 0;
-    for (long long i = 0; i < n;i++){
-        if(arr[i] == minimum){
+    sort(arr, arr+n);
+
+    int counter = 0;
+    for (int i = 0; i < n;i++){
+        if(arr[i] == arr[0]){
             counter++;
         }
     }
